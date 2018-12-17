@@ -1,8 +1,8 @@
 ## REST
 
-[rest.ravencoin.online](https://rest.ravencoin.online) is the REST layer for Bitcoin.comravencoin.online's Cloud.
+[rest.ravencoin.online](https://rest.ravencoin.online) is the REST layer for ravencoin.online's Cloud.
 
-More info: [developer.bitcoin.com](https://developer.bitcoin.com). Chatroom [http://geni.us/CashDev](geni.us/CashDev)
+More info: [developer.bitcoin.com](https://developer.bitcoin.com).
 
 Testnet available at [trest.ravencoin.online](https://trest.ravencoin.online)
 
