@@ -6,7 +6,7 @@ const axios = require("axios")
 const RateLimit = require("express-rate-limit")
 
 const RVNBOXCli = require("rvnbox-sdk/lib/rvnbox-sdk").default
-const RVNBOX = new BITBOXCli()
+const RVNBOX = new RVNBOXCli()
 
 const config = {
   transactionRateLimit1: undefined,

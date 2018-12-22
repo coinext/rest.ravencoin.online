@@ -72,7 +72,7 @@ function root(
   return res.json({ status: "address" })
 }
 
-// Query the Insight API for details on a single BCH address.
+// Query the Insight API for details on a single RVN address.
 async function detailsFromInsight(thisAddress: string, req: express.Request) {
   try {
     const legacyAddr = RVNBOX.Address.toLegacyAddress(thisAddress)
@@ -99,8 +99,8 @@ async function detailsFromInsight(thisAddress: string, req: express.Request) {
 }
 
 // POST handler for bulk queries on address details
-// curl -d '{"addresses": ["bchtest:qzjtnzcvzxx7s0na88yrg3zl28wwvfp97538sgrrmr", "bchtest:qp6hgvevf4gzz6l7pgcte3gaaud9km0l459fa23dul"]}' -H "Content-Type: application/json" http://localhost:3000/v2/address/details
-// curl -d '{"addresses": ["bchtest:qzjtnzcvzxx7s0na88yrg3zl28wwvfp97538sgrrmr", "bchtest:qp6hgvevf4gzz6l7pgcte3gaaud9km0l459fa23dul"], "from": 1, "to": 5}' -H "Content-Type: application/json" http://localhost:3000/v2/address/details
+// curl -d '{"addresses": ["rvntest:qzjtnzcvzxx7s0na88yrg3zl28wwvfp97538sgrrmr", "rvntest:qp6hgvevf4gzz6l7pgcte3gaaud9km0l459fa23dul"]}' -H "Content-Type: application/json" http://localhost:3000/v2/address/details
+// curl -d '{"addresses": ["rvntest:qzjtnzcvzxx7s0na88yrg3zl28wwvfp97538sgrrmr", "rvntest:qp6hgvevf4gzz6l7pgcte3gaaud9km0l459fa23dul"], "from": 1, "to": 5}' -H "Content-Type: application/json" http://localhost:3000/v2/address/details
 async function detailsBulk(
   req: express.Request,
   res: express.Response,
@@ -124,13 +124,13 @@ async function detailsBulk(
     for (let i = 0; i < addresses.length; i++) {
       const thisAddress = addresses[i] // Current address.
 
-      // Ensure the input is a valid BCH address.
+      // Ensure the input is a valid RVN address.
       try {
         var legacyAddr = RVNBOX.Address.toLegacyAddress(thisAddress)
       } catch (err) {
         res.status(400)
         return res.json({
-          error: `Invalid BCH address. Double check your address is valid: ${thisAddress}`
+          error: `Invalid RVN address. Double check your address is valid: ${thisAddress}`
         })
       }
 
@@ -191,13 +191,13 @@ async function detailsSingle(
 
     logger.debug(`Executing address/detailsSingle with this address: `, address)
 
-    // Ensure the input is a valid BCH address.
+    // Ensure the input is a valid RVN address.
     try {
       var legacyAddr = RVNBOX.Address.toLegacyAddress(address)
     } catch (err) {
       res.status(400)
       return res.json({
-        error: `Invalid BCH address. Double check your address is valid: ${address}`
+        error: `Invalid RVN address. Double check your address is valid: ${address}`
       })
     }
 
@@ -281,13 +281,13 @@ async function utxoBulk(
     for (let i = 0; i < addresses.length; i++) {
       const thisAddress = addresses[i] // Current address.
 
-      // Ensure the input is a valid BCH address.
+      // Ensure the input is a valid RVN address.
       try {
         var legacyAddr = RVNBOX.Address.toLegacyAddress(thisAddress)
       } catch (err) {
         res.status(400)
         return res.json({
-          error: `Invalid BCH address. Double check your address is valid: ${thisAddress}`
+          error: `Invalid RVN address. Double check your address is valid: ${thisAddress}`
         })
       }
 
@@ -347,13 +347,13 @@ async function utxoSingle(
 
     logger.debug(`Executing address/utxoSingle with this address: `, address)
 
-    // Ensure the input is a valid BCH address.
+    // Ensure the input is a valid RVN address.
     try {
       var legacyAddr = RVNBOX.Address.toLegacyAddress(address)
     } catch (err) {
       res.status(400)
       return res.json({
-        error: `Invalid BCH address. Double check your address is valid: ${address}`
+        error: `Invalid RVN address. Double check your address is valid: ${address}`
       })
     }
 
@@ -410,13 +410,13 @@ async function unconfirmedBulk(
     for (let i = 0; i < addresses.length; i++) {
       const thisAddress = addresses[i] // Current address.
 
-      // Ensure the input is a valid BCH address.
+      // Ensure the input is a valid RVN address.
       try {
         var legacyAddr = RVNBOX.Address.toLegacyAddress(thisAddress)
       } catch (err) {
         res.status(400)
         return res.json({
-          error: `Invalid BCH address. Double check your address is valid: ${thisAddress}`
+          error: `Invalid RVN address. Double check your address is valid: ${thisAddress}`
         })
       }
 
@@ -482,13 +482,13 @@ async function unconfirmedSingle(
 
     logger.debug(`Executing address/utxoSingle with this address: `, address)
 
-    // Ensure the input is a valid BCH address.
+    // Ensure the input is a valid RVN address.
     try {
       var legacyAddr = RVNBOX.Address.toLegacyAddress(address)
     } catch (err) {
       res.status(400)
       return res.json({
-        error: `Invalid BCH address. Double check your address is valid: ${address}`
+        error: `Invalid RVN address. Double check your address is valid: ${address}`
       })
     }
 
@@ -589,13 +589,13 @@ async function transactionsBulk(
     for (let i = 0; i < addresses.length; i++) {
       const thisAddress = addresses[i] // Current address.
 
-      // Ensure the input is a valid BCH address.
+      // Ensure the input is a valid RVN address.
       try {
         RVNBOX.Address.toLegacyAddress(thisAddress)
       } catch (err) {
         res.status(400)
         return res.json({
-          error: `Invalid BCH address. Double check your address is valid: ${thisAddress}`
+          error: `Invalid RVN address. Double check your address is valid: ${thisAddress}`
         })
       }
 
@@ -655,13 +655,13 @@ async function transactionsSingle(
 
     logger.debug(`Executing address/transactionsSingle with this address: `, address)
 
-    // Ensure the input is a valid BCH address.
+    // Ensure the input is a valid RVN address.
     try {
       var legacyAddr = RVNBOX.Address.toLegacyAddress(address)
     } catch (err) {
       res.status(400)
       return res.json({
-        error: `Invalid BCH address. Double check your address is valid: ${address}`
+        error: `Invalid RVN address. Double check your address is valid: ${address}`
       })
     }
 

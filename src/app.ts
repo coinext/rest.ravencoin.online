@@ -13,7 +13,7 @@ const debug = require("debug")("rest-cloud:server")
 const http = require("http")
 const cors = require("cors")
 
-const BitcoinCashZMQDecoder = require("ravencoincash-zmq-decoder")
+const RavencoinZMQDecoder = require("ravencoin-zmq-decoder")
 
 const zmq = require("zeromq")
 
