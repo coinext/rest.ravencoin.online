@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "description": "rest.ravencoin.online is the REST layer for ravencoin.online's Cloud. More info: [developer.ravencoin.online](https://developer.ravencoin.online). Chatroom [geni.us/CashDev](http://geni.us/CashDev)",
+    "description": "rest.ravencoin.online is the REST layer for ravencoin.online's Cloud. More info: [developer.ravencoin.online](https://developer.ravencoin.online).",
     "version": "1.0.0",
     "title": "REST",
     "license": {
@@ -1160,7 +1160,7 @@
       "post": {
         "tags": ["rawtransactions"],
         "summary": "createRawTxChange",
-        "description": "Create a transaction spending the given inputs and creating new outputs. API Reference: https://developer.ravencoin.online/wormhole/docs/rawTransactions",
+        "description": "Create a transaction spending the given inputs and creating new outputs. ",
         "operationId": "rawTransactionsCreate",
         "parameters": [
           {
@@ -1216,7 +1216,7 @@
       "post": {
         "tags": ["rawtransactions"],
         "summary": "createRawTxChange",
-        "description": "Adds a change output to the transaction.API Reference: https://developer.ravencoin.online/wormhole/docs/rawTransactions",
+        "description": "Adds a change output to the transaction.",
         "operationId": "rawTransactionsChange",
         "parameters": [
           {
@@ -1292,7 +1292,7 @@
       "post": {
         "tags": ["rawtransactions"],
         "summary": "createRawTxInput",
-        "description": "Adds a transaction input to the transaction.API Reference: https://developer.ravencoin.online/wormhole/docs/rawTransactions",
+        "description": "Adds a transaction input to the transaction.",
         "operationId": "rawTransactionsInput",
         "parameters": [
           {
@@ -1337,7 +1337,7 @@
       "post": {
         "tags": ["rawtransactions"],
         "summary": "createRawTxOpReturn",
-        "description": "Adds a payload with class C (op-return) encoding to the transaction.API Reference: https://developer.ravencoin.online/wormhole/docs/rawTransactions",
+        "description": "Adds a payload with class C (op-return) encoding to the transaction.",
         "operationId": "rawTransactionsOpReturn",
         "parameters": [
           {
@@ -1372,7 +1372,7 @@
       "post": {
         "tags": ["rawtransactions"],
         "summary": "createRawTxReference",
-        "description": "Adds a reference output to the transaction. API Reference: https://developer.ravencoin.online/wormhole/docs/rawTransactions",
+        "description": "Adds a reference output to the transaction. ",
         "operationId": "rawTransactionsReference",
         "parameters": [
           {
@@ -1417,7 +1417,7 @@
       "get": {
         "tags": ["rawtransactions"],
         "summary": "decodeTransaction",
-        "description": "Decodes an Omni transaction. API Reference: https://developer.ravencoin.online/wormhole/docs/rawTransactions",
+        "description": "Decodes an Omni transaction. ",
         "operationId": "rawTransactionsDecodeTransaction",
         "parameters": [
           {
