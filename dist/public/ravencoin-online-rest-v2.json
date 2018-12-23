@@ -1541,7 +1541,7 @@
             "type": "number",
             "format": "float"
           },
-          "corbes": {
+          "satoshis": {
             "type": "number"
           },
           "height": {
@@ -1577,7 +1577,7 @@
             "type": "number",
             "format": "float"
           },
-          "corbes": {
+          "satoshis": {
             "type": "number"
           },
           "height": {
