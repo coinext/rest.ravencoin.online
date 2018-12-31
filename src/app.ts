@@ -35,8 +35,6 @@ const networkV1 = require("./routes/v1/network")
 const rawtransactionsV1 = require("./routes/v1/rawtransactions")
 const transactionV1 = require("./routes/v1/transaction")
 const utilV1 = require("./routes/v1/util")
-const dataRetrievalV1 = require("./routes/v1/dataRetrieval")
-const payloadCreationV1 = require("./routes/v1/payloadCreation")
 
 // v2
 const indexV2 = require("./routes/v2/index")
@@ -51,8 +49,6 @@ const networkV2 = require("./routes/v2/network")
 const rawtransactionsV2 = require("./routes/v2/rawtransactions")
 const transactionV2 = require("./routes/v2/transaction")
 const utilV2 = require("./routes/v2/util")
-const dataRetrievalV2 = require("./routes/v2/dataRetrieval")
-const payloadCreationV2 = require("./routes/v2/payloadCreation")
 
 interface IError {
   message: string
@@ -119,8 +115,6 @@ app.use(`/${v1prefix}/` + `network`, networkV1)
 app.use(`/${v1prefix}/` + `rawtransactions`, rawtransactionsV1)
 app.use(`/${v1prefix}/` + `transaction`, transactionV1)
 app.use(`/${v1prefix}/` + `util`, utilV1)
-app.use(`/${v1prefix}/` + `dataRetrieval`, dataRetrievalV1)
-app.use(`/${v1prefix}/` + `payloadCreation`, payloadCreationV1)
 
 app.use("/", indexV2)
 app.use(`/${v2prefix}/` + `health-check`, healthCheckV2)
@@ -134,8 +128,6 @@ app.use(`/${v2prefix}/` + `network`, networkV2)
 app.use(`/${v2prefix}/` + `rawtransactions`, rawtransactionsV2.router)
 app.use(`/${v2prefix}/` + `transaction`, transactionV2.router)
 app.use(`/${v2prefix}/` + `util`, utilV2.router)
-app.use(`/${v2prefix}/` + `dataRetrieval`, dataRetrievalV2.router)
-app.use(`/${v2prefix}/` + `payloadCreation`, payloadCreationV2.router)
 
 // catch 404 and forward to error handler
 app.use(
