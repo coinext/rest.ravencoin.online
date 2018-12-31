@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "description": "rest.ravencoin.online is the REST layer for ravencoin.onlines's Cloud. More info: [developer.ravencoin.online](https://developer.ravencoin.online).",
+    "description": "rest.ravencoin.online is the REST layer for ravencoin.onlines's Cloud. More info: [developer.ravencoin.online](http://developer.ravencoin.online).",
     "version": "1.0.0",
     "title": "REST",
     "license": {
@@ -15,7 +15,7 @@
       "description": "Address details and utxo",
       "externalDocs": {
         "description": "Find out more",
-        "url": "https://developer.ravencoin.online/rvnbox/docs/address"
+        "url": "http://developer.ravencoin.online/rvnbox/docs/address"
       }
     },
     {
@@ -23,7 +23,7 @@
       "description": "Block Details",
       "externalDocs": {
         "description": "Find out more",
-        "url": "https://developer.ravencoin.online/rvnbox/docs/block"
+        "url": "http://developer.ravencoin.online/rvnbox/docs/block"
       }
     },
     {
@@ -31,7 +31,7 @@
       "description": "Interacting w/ the RVN Blockchain",
       "externalDocs": {
         "description": "Find out more",
-        "url": "https://developer.ravencoin.online/rvnbox/docs/blockchain"
+        "url": "http://developer.ravencoin.online/rvnbox/docs/blockchain"
       }
     },
     {
@@ -39,7 +39,7 @@
       "description": "Control your blockchain",
       "externalDocs": {
         "description": "Find out more",
-        "url": "https://developer.ravencoin.online/rvnbox/docs/control"
+        "url": "http://developer.ravencoin.online/rvnbox/docs/control"
       }
     },
     {
@@ -47,7 +47,7 @@
       "description": "Mining w/ the RVN Blockchain",
       "externalDocs": {
         "description": "Find out more",
-        "url": "https://developer.ravencoin.online/rvnbox/docs/mining"
+        "url": "http://developer.ravencoin.online/rvnbox/docs/mining"
       }
     },
     {
@@ -55,7 +55,7 @@
       "description": "Create transactions to be transmitted to the network.",
       "externalDocs": {
         "description": "Find out more",
-        "url": "https://developer.ravencoin.online/rvnbox/docs/rawtransactions"
+        "url": "http://developer.ravencoin.online/rvnbox/docs/rawtransactions"
       }
     },
     {
@@ -63,7 +63,7 @@
       "description": "Transaction details.",
       "externalDocs": {
         "description": "Find out more",
-        "url": "https://developer.ravencoin.online/rvnbox/docs/rawtransactions"
+        "url": "http://developer.ravencoin.online/rvnbox/docs/rawtransactions"
       }
     },
     {
@@ -71,7 +71,7 @@
       "description": "Ravencoin utilities.",
       "externalDocs": {
         "description": "Find out more",
-        "url": "https://developer.ravencoin.online/rvnbox/docs/util"
+        "url": "http://developer.ravencoin.online/rvnbox/docs/util"
       }
     }
   ],

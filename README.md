@@ -2,7 +2,7 @@
 
 [rest.ravencoin.online](https://rest.ravencoin.online) is the REST layer for ravencoin.online's Cloud.
 
-More info: [developer.ravencoin.online](https://developer.ravencoin.online).
+More info: [developer.ravencoin.online](http://developer.ravencoin.online).
 
 Testnet available at [trest.ravencoin.online](https://trest.ravencoin.online)
 
