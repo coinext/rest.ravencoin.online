@@ -1,10 +1,10 @@
 ## REST
 
-[rest.ravencoin.online](https://rest.ravencoin.online) is the REST layer for ravencoin.online's Cloud.
+[rest.ravencoin.online](http://rest.ravencoin.online) is the REST layer for ravencoin.online's Cloud.
 
 More info: [developer.ravencoin.online](http://developer.ravencoin.online).
 
-Testnet available at [trest.ravencoin.online](https://trest.ravencoin.online)
+Testnet available at [trest.ravencoin.online](http://trest.ravencoin.online)
 
 ## Usage
 You can also run an instance of REST for your own full node
