@@ -19,8 +19,6 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "rvnbox-sdk": "^1.0.4",
-    "rvncoin-zmq-decoder": "^1.0.2",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.3",
@@ -37,7 +35,9 @@
     "mqtt": "^2.8.0",
     "pg": "^6.2.3",
     "pg-hstore": "^2.3.2",
+    "ravencoin-zmq-decoder": "^1.0.2",
     "request": "^2.87.0",
+    "rvnbox-sdk": "^1.0.4",
     "sequelize": "^3.30.4",
     "socket.io": "^2.1.1",
     "swagger-stats": "^0.95.6",

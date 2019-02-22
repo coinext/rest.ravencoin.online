@@ -14,7 +14,7 @@ var RavencoinZMQDecoder = require("ravencoin-zmq-decoder");
 var zmq = require("zeromq");
 var sock = zmq.socket("sub");
 var swStats = require("swagger-stats");
-var apiSpec = require("./public/ravencoin-online-rest-v1.json");
+var apiSpec = require("./public/ravencoin-online-rest-v2.json");
 // v1
 var indexV1 = require("./routes/v1/index");
 var healthCheckV1 = require("./routes/v1/health-check");
@@ -41,6 +41,7 @@ var networkV2 = require("./routes/v2/network");
 var rawtransactionsV2 = require("./routes/v2/rawtransactions");
 var transactionV2 = require("./routes/v2/transaction");
 var utilV2 = require("./routes/v2/util");
+var assetV2 = require("./routes/v2/asset");
 require("dotenv").config();
 var app = express();
 app.use(swStats.getMiddleware({ swaggerSpec: apiSpec }));
@@ -87,6 +88,7 @@ app.use("/" + v2prefix + "/" + "network", networkV2);
 app.use("/" + v2prefix + "/" + "rawtransactions", rawtransactionsV2.router);
 app.use("/" + v2prefix + "/" + "transaction", transactionV2.router);
 app.use("/" + v2prefix + "/" + "util", utilV2.router);
+app.use("/" + v2prefix + "/" + "asset", assetV2.router);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     var err = {

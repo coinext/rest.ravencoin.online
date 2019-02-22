@@ -77,7 +77,7 @@ async function detailsFromInsight(thisAddress: string, req: express.Request) {
   try {
     const legacyAddr = RVNBOX.Address.toLegacyAddress(thisAddress)
 
-    let path = `${process.env.RVNCOINONLINE_BASEURL}addr/${legacyAddr}`
+    let path = `${process.env.RAVENCOINONLINE_BASEURL}addr/${legacyAddr}`
 
     // Optional query strings limit the number of TXIDs.
     // https://github.com/bitpay/insight-api/blob/master/README.md#notes-on-upgrading-from-v02
@@ -237,7 +237,7 @@ async function utxoFromInsight(thisAddress: string) {
   try {
     const legacyAddr = RVNBOX.Address.toLegacyAddress(thisAddress)
 
-    const path = `${process.env.RVNCOINONLINE_BASEURL}addr/${legacyAddr}/utxo`
+    const path = `${process.env.RAVENCOINONLINE_BASEURL}addr/${legacyAddr}/utxo`
 
     // Query the Insight server.
     const response = await axios.get(path)
@@ -550,7 +550,7 @@ async function unconfirmedSingle(
 async function transactionsFromInsight(thisAddress: string) {
   try {
     const path = `${
-      process.env.RVNCOINONLINE_BASEURL
+      process.env.RAVENCOINONLINE_BASEURL
     }txs/?address=${thisAddress}`
 
     // Query the Insight server.

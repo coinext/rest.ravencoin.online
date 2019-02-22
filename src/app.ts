@@ -20,7 +20,7 @@ const zmq = require("zeromq")
 const sock: any = zmq.socket("sub")
 
 const swStats = require("swagger-stats")
-const apiSpec = require("./public/ravencoin-online-rest-v1.json")
+const apiSpec = require("./public/ravencoin-online-rest-v2.json")
 
 // v1
 const indexV1 = require("./routes/v1/index")
@@ -49,6 +49,7 @@ const networkV2 = require("./routes/v2/network")
 const rawtransactionsV2 = require("./routes/v2/rawtransactions")
 const transactionV2 = require("./routes/v2/transaction")
 const utilV2 = require("./routes/v2/util")
+const assetV2 = require("./routes/v2/asset")
 
 interface IError {
   message: string
@@ -128,6 +129,7 @@ app.use(`/${v2prefix}/` + `network`, networkV2)
 app.use(`/${v2prefix}/` + `rawtransactions`, rawtransactionsV2.router)
 app.use(`/${v2prefix}/` + `transaction`, transactionV2.router)
 app.use(`/${v2prefix}/` + `util`, utilV2.router)
+app.use(`/${v2prefix}/` + `asset`, assetV2.router)
 
 // catch 404 and forward to error handler
 app.use(

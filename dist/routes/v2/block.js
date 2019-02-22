@@ -88,7 +88,7 @@ function detailsByHash(req, res, next) {
                         res.status(400);
                         return [2 /*return*/, res.json({ error: "hash must not be empty" })];
                     }
-                    return [4 /*yield*/, axios_1.default.get(process.env.RVNCOINONLINE_BASEURL + "block/" + hash)];
+                    return [4 /*yield*/, axios_1.default.get(process.env.RAVENCOINONLINE_BASEURL + "block/" + hash)];
                 case 1:
                     response = _a.sent();
                     parsed = response.data;

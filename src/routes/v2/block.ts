@@ -75,7 +75,7 @@ async function detailsByHash(
     }
 
     const response = await axios.get(
-      `${process.env.RVNCOINONLINE_BASEURL}block/${hash}`
+      `${process.env.RAVENCOINONLINE_BASEURL}block/${hash}`
     )
 
     const parsed = response.data

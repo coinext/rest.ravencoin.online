@@ -95,7 +95,7 @@ function detailsFromInsight(thisAddress, req) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
                     legacyAddr = RVNBOX.Address.toLegacyAddress(thisAddress);
-                    path = process.env.RVNCOINONLINE_BASEURL + "addr/" + legacyAddr;
+                    path = process.env.RAVENCOINONLINE_BASEURL + "addr/" + legacyAddr;
                     // Optional query strings limit the number of TXIDs.
                     // https://github.com/bitpay/insight-api/blob/master/README.md#notes-on-upgrading-from-v02
                     if (req.body.from && req.body.to)
@@ -259,7 +259,7 @@ function utxoFromInsight(thisAddress) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
                     legacyAddr = RVNBOX.Address.toLegacyAddress(thisAddress);
-                    path = process.env.RVNCOINONLINE_BASEURL + "addr/" + legacyAddr + "/utxo";
+                    path = process.env.RAVENCOINONLINE_BASEURL + "addr/" + legacyAddr + "/utxo";
                     return [4 /*yield*/, axios_1.default.get(path)
                         // Append different address formats to the return data.
                     ];
@@ -565,7 +565,7 @@ function transactionsFromInsight(thisAddress) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
-                    path = process.env.RVNCOINONLINE_BASEURL + "txs/?address=" + thisAddress;
+                    path = process.env.RAVENCOINONLINE_BASEURL + "txs/?address=" + thisAddress;
                     return [4 /*yield*/, axios_1.default.get(path)
                         // Append different address formats to the return data.
                     ];
